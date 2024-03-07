@@ -63,6 +63,7 @@ with open(budgetPath) as budget:
     Greatest Increase in Profits: {greatestIncreaseMonth} $({greatestIncrease})
     Greatest Decrease in Profits: {greatestDecreaseMonth} $({greatestDecrease})
     """
+    
     print(analysis)
 
     output = open("Analysis/results.txt", "w")
