@@ -22,9 +22,8 @@ with open(csvPath) as data:
     # Loop through CSV
     for row in reader:
 
-        # Increment votes
+        # Increment votes and extract candidate name
         votes += 1
-
         candidate = row[2]
 
         # Put candidate in the candidates list if they are not already there
@@ -48,7 +47,7 @@ winner = candidates[votesByCandidate.index(max(votesByCandidate))]
 candidateTotals = ""
 for i in range(len(candidates)):
     candidateTotals += f"{candidates[i]}: {percentages[i]:.2f}% ({votesByCandidate[i]})"
-    if i < 2:
+    if i < len(candidates):
         candidateTotals += "\n"
 
 # Print analysis and output to text file
